@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #000;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product img {
+    width: 200px;
+}
+
+.product button {
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* CART */
+.cart {
+    padding: 50px 20px;
+    background: #000;
+}
+
+.cart ul {
+    list-style: none;
+    margin: 20px 0;
+}
