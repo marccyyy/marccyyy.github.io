@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #111;
-    color: #fff;
+    background: #fff;
+    color: #111;
 }
 
 /* NAVBAR */
@@ -15,76 +15,106 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background: #000;
+    border-bottom: 1px solid #ddd;
 }
 
-.logo {
-    font-size: 24px;
+header h1 {
+    font-size: 18px;
 }
 
-nav a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
+#menuBtn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+    padding: 80px 20px;
 }
 
 .hero h2 {
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.hero button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: white;
+.verse {
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.shop-btn {
+    padding: 12px 30px;
     border: none;
+    background: black;
+    color: white;
     cursor: pointer;
+}
+
+/* STORY */
+.story {
+    text-align: center;
+    padding: 60px 20px;
 }
 
 /* PRODUCTS */
 .products {
-    padding: 50px 20px;
+    padding: 40px 20px;
+}
+
+.products h2 {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .product-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .product {
-    background: #222;
+    border: 1px solid #ddd;
     padding: 20px;
-    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 .product img {
-    width: 200px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.product button {
-    margin-top: 10px;
-    padding: 10px;
-    background: white;
-    border: none;
-    cursor: pointer;
+.product h3 {
+    margin: 10px 0;
 }
 
-/* CART */
-.cart {
-    padding: 50px 20px;
-    background: #000;
+/* CATEGORIES */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
 }
 
-.cart ul {
-    list-style: none;
-    margin: 20px 0;
+.category {
+    border: 1px solid #000;
+    padding: 40px;
+    width: 40%;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
 }
