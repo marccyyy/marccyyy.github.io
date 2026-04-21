@@ -1,43 +1,45 @@
-let cart = [];
-let total = 0;
-
-function addToCart(name, price) {
-    cart.push({ name, price });
-    total += price;
-
-    updateCart();
-}
-
-function updateCart() {
-    const cartItems = document.getElementById("cart-items");
-    const totalDisplay = document.getElementById("total");
-    const count = document.getElementById("cart-count");
-
-    cartItems.innerHTML = "";
-
-    cart.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = `${item.name} - ₱${item.price}`;
-        cartItems.appendChild(li);
-    });
-
-    totalDisplay.textContent = total;
-    count.textContent = cart.length;
-}
-
-function checkout() {
-    if (cart.length === 0) {
-        alert("Cart is empty!");
-    } else {
-        alert("Thank you for your purchase!");
-        cart = [];
-        total = 0;
-        updateCart();
-    }
-}
-
+// SCROLL TO PRODUCTS
 function scrollToProducts() {
     document.getElementById("products").scrollIntoView({
         behavior: "smooth"
     });
 }
+
+// PRODUCT DATA
+const products = [
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" },
+    { name: "Minimalist Hoodie", price: "Php 500" }
+];
+
+// LOAD PRODUCTS
+const grid = document.getElementById("productGrid");
+
+products.forEach(product => {
+    const div = document.createElement("div");
+    div.classList.add("product");
+
+    div.innerHTML = `
+        <img src="https://via.placeholder.com/200" alt="hoodie">
+        <h3>${product.name}</h3>
+        <p>${product.price}</p>
+        <button onclick="buyNow()">Buy Now</button>
+    `;
+
+    grid.appendChild(div);
+});
+
+// BUY BUTTON FUNCTION
+function buyNow() {
+    alert("Product added! (You can connect this to checkout later)");
+}
+
+// MENU BUTTON (for future mobile nav)
+document.getElementById("menuBtn").addEventListener("click", () => {
+    alert("Menu coming soon!");
+});
